@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import StarRating, { getAvatarColor, getInitials } from './StarRating';
+import companyLogo from '../assets/images/companyLogo.svg';
 
 export default function CompanyCard({ company }) {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ export default function CompanyCard({ company }) {
           aria-label={`${name} logo`}
           className='h-[100px] w-[105.28px]'
         >
-          <img src="../src/assets/images/companyLogo.svg" alt={name} />
+          <img src={companyLogo} alt={name} />
         </div>
 
         <div className='flex flex-col flex-1'>

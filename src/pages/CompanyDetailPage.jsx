@@ -5,6 +5,7 @@ import { getReviews } from '../services/api';
 import StarRating, { getAvatarColor, getInitials } from '../components/StarRating';
 import ReviewCard from '../components/ReviewCard';
 import AddReviewModal from '../components/AddReviewModal';
+import companyLogo from '../assets/images/companyLogo.svg';
 
 const SORT_OPTIONS = [
   { value: 'date', label: 'Date' },
@@ -92,7 +93,7 @@ export default function CompanyDetailPage() {
               aria-label={`${company?.name} logo`}
               className='h-[100px] w-[105.28px]'
             >
-              <img src="../src/assets/images/companyLogo.svg" alt={company?.name} />
+              <img src={companyLogo} alt={company?.name} />
             </div>
 
             <div className='flex flex-col flex-1'>

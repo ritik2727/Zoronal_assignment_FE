@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { getCompanies, getCities } from '../services/api';
 import CompanyCard from '../components/CompanyCard';
 import AddCompanyModal from '../components/AddCompanyModal';
+import locationIcon from '../assets/images/locationIcon.svg';
 
 const SORT_OPTIONS = [
   { value: 'name', label: 'Name' },
@@ -117,7 +118,7 @@ export default function HomePage() {
                   pointerEvents: 'none',
                   display: 'flex',
                 }}>
-                  <img src="src/assets/images/locationIcon.svg" alt="location icon" />
+                  <img src={locationIcon} alt="location icon" />
                 </span>
               </div>
 

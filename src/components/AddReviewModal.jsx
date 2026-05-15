@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createReview } from '../services/api';
 import StarRating from './StarRating';
+import crossIcon from '../assets/images/crossIcon.svg';
 
 const LABELS = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
 const INITIAL = { fullName: '', subject: '', reviewText: '', rating: 0 };
@@ -44,7 +45,7 @@ export default function AddReviewModal({ companyId, onClose, onCreated }) {
         <div className="ellipse-gradient" />
 
         <button className="modal-close" onClick={onClose} aria-label="Close modal">
-          <img src="../src/assets/images/crossIcon.svg" alt="close icon" />
+          <img src={crossIcon} alt="close icon" />
         </button>
 
         <h2 className="modal-title" id="add-review-title">Add Review</h2>

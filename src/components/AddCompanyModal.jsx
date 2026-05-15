@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { createCompany } from '../services/api';
+import crossIcon from '../assets/images/crossIcon.svg';
+import grayLocationIcon from '../assets/images/grayLocationIcon.svg';
+import grayCalenderIcon from '../assets/images/grayCalenderIcon.svg';
 
 const INITIAL = { name: '', location: '', city: '', foundedOn: '' };
 
@@ -37,7 +40,7 @@ export default function AddCompanyModal({ onClose, onCreated }) {
         <div className="ellipse-gradient" />
 
         <button className="modal-close" onClick={onClose} aria-label="Close modal">
-          <img src="../src/assets/images/crossIcon.svg" alt="close icon" />
+          <img src={crossIcon} alt="close icon" />
         </button>
 
         <h2 className="modal-title" id="add-company-title">Add Company</h2>
@@ -75,7 +78,7 @@ export default function AddCompanyModal({ onClose, onCreated }) {
               onChange={handleChange}
             />
              <img
-              src="../src/assets/images/grayLocationIcon.svg"
+              src={grayLocationIcon}
               alt="location"
               className="input-icon"
             />
@@ -92,7 +95,7 @@ export default function AddCompanyModal({ onClose, onCreated }) {
               onChange={handleChange}
             />
             <img
-              src="../src/assets/images/grayCalenderIcon.svg"
+              src={grayCalenderIcon}
               alt="calendar"
               className="input-icon"
             />

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.svg';
+import searchIcon from '../assets/images/searchIcon.svg';
 
 export default function Navbar() {
   const [search, setSearch] = useState("")
@@ -7,7 +9,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand">
-          <img src="src/assets/images/logo.svg" alt="Company Review Logo" />
+          <img src={logo} alt="Company Review Logo" />
         </Link>
 
 
@@ -25,7 +27,7 @@ export default function Navbar() {
             onChange={(e) => setSearch(e.target.value)}
           />
           <img
-            src="../src/assets/images/searchIcon.svg"
+            src={searchIcon}
             alt="calendar"
             className="input-icon"
             style={{top:"50%"}}
